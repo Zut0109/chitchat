@@ -3,8 +3,11 @@ session_start();
 require('database/ChatUser.php');
 
 require('database/chatroom.php');
+
 include("connection.php");
+
 include("class/user.php");
+
 $user_object = new ChatUser;
 
 $user_object->setUserEmail($_SESSION['mail']);

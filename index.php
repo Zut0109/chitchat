@@ -23,7 +23,7 @@
 							<div class="col-md-12">
 								<div class="content">
 									<h1>Sign in to Chat</h1>
-									<form action="checkLogin.php" method="post">
+									<form action="checklogin.php" method="post">
 										<div class="form-group">
 											<input type="email" name= "inputEmail" id="inputEmail" class="form-control" placeholder="Email Address" required>
 											<button class="btn icon"><i class="material-icons">mail_outline</i></button>

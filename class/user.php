@@ -72,7 +72,7 @@ class user
 	function add($number,$name,$mail,$pass)
 	{
 		include("connection.php");
-		$sql2="INSERT INTO user(no, name, mail, pass) VALUE ($number, '$name', '$mail', '$pass')";
+		$sql2="INSERT INTO user(no, name, mail, pass, avatar) VALUE ($number, '$name', '$mail', '$pass', 'images/avatar/Defaut.jpg')";
 		$query2=mysqli_query($link, $sql2);
 		return $query2;
 	}

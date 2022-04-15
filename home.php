@@ -6,6 +6,23 @@ if(!isset($_SESSION['mail']))
 {
 	header('location:index.php');
 }
+if( isset($_REQUEST['addfriend'])){
+	$checkaddfr=$_REQUEST['addfriend'];
+	if ($checkaddfr==1){
+		echo "
+							<script language='javascript'>
+								alert('Make friend susscesfully');
+							</script>
+						";
+	}
+	else 
+	echo "
+	<script language='javascript'>
+		alert('Already add this friend');
+	</script>
+";	
+}
+
 if (isset($_REQUEST['friendmail'])){
 	$_SESSION['mailfr']= $_REQUEST['friendmail'];
 }
@@ -144,7 +161,6 @@ $user_data = $user_object->get_user_all_data();
 										}
 												?>
 										</div>
-										<a href="friendadd.php"><i class="material-icons">person_add</i></a>
 									</div>
 								</div>
 								<!-- End of Contacts -->
@@ -510,13 +526,6 @@ $user_data = $user_object->get_user_all_data();
 				</div>
 				<!-- End of Sidebar -->
 				<!-- Start of Add Friends -->
-				<?php 
-					$user= new user;
-					$alluser= $user->getAllUser();
-					$ustestname= "Hoai2";
-					$ustestmail= "yuri@gmail.com";
-					$ustestavt= "images/avatar/Hoai2_avt.jpg";
-					?>
 				<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
 					<div class="modal-dialog modal-dialog-centered" role="document">
 						<div class="requests">
@@ -544,6 +553,7 @@ $user_data = $user_object->get_user_all_data();
 				<div class="main">
 					<div class="tab-content" id="nav-tabContent">
 					    <?php 
+						
 						?>
 						<!-- Start of Babble -->
 						<div class="babble tab-pane fade active show" id="list-chat" role="tabpanel" aria-labelledby="list-chat-list">

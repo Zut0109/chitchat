@@ -22,10 +22,11 @@ $p= new user;
 							</script>
 						";
 		$sql2 = mysqli_query($link, "SELECT * FROM chatfriend");
-		$dem2 = mysqli_num_rows($sql1);
-		echo $dem2;
+		$dem2 = mysqli_num_rows($sql2);
 		$addadmin=$p->addfriendadmin($dem2+1,$mail);
-		// header('Location: index.php');
+		echo "Đăng kí thành công";
+		
+		header('Location: index.php');
     }
 	else echo "Đăng kí thất bại";
 ?>
