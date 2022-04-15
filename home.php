@@ -71,16 +71,6 @@ $user_data = $user_object->get_user_all_data();
 		<!-- Favicon -->
 		<link href="dist/img/favicon.png" type="image/png" rel="icon">
 		<!-- Bootstrap core JavaScript -->
-		<script src="vendor-front/jquery/jquery.js"></script>
-		
-		<!-- <script src="vendor-front/jquery/jquery.min.js"></script> -->
-
-    	<script src="vendor-front/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    	<!-- Core plugin JavaScript-->
-    	<script src="vendor-front/jquery-easing/jquery.easing.min.js"></script>
-
-    	<script type="text/javascript" src="vendor-front/parsley/dist/parsley.min.js"></script>
 	</head>
 	<body>
 		<main>
@@ -671,7 +661,16 @@ $user_data = $user_object->get_user_all_data();
 		<!-- Bootstrap/Swipe core JavaScript
 		================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="vendor-front/jquery/jquery.js"></script>
+		
+		<!-- <script src="vendor-front/jquery/jquery.min.js"></script> -->
 
+    	<script src="vendor-front/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    	<!-- Core plugin JavaScript-->
+    	<script src="vendor-front/jquery-easing/jquery.easing.min.js"></script>
+
+    	<script type="text/javascript" src="vendor-front/parsley/dist/parsley.min.js"></script>
 
 		<script type="text/javascript" src="vendor-front/parsley/dist/parsley.min.js"></script>
 		<script>
