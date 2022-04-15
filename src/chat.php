@@ -43,9 +43,8 @@ class Chat implements MessageComponentInterface {
         $getmail = $data['sendto'];
         $chat_object->settimesend(date("Y-m-d h:i:s"));
         $time =date("d-m-Y h:i:s");
-
-        $link=mysqli_connect("localhost","root","") or die("Cannot connect to the localhost");
-	    mysqli_select_db($link ,"nhantin") or die("Cannot connect to the database");
+        $link=mysqli_connect("us-cdbr-east-05.cleardb.net","b879315a711615","a9caf152") or die("Cannot connect to the localhost");
+	    mysqli_select_db($link ,"heroku_15432f44b19325e") or die("Cannot connect to the database");
 	    mysqli_query($link, "SET NAMES 'UTF8'");
         $sql_check2 = mysqli_query($link, "INSERT INTO tinnhan(no, sendmail, sendtext, getmail, timesend) VALUES ($chatid,'$sendmail','$text','$getmail','$time')");
         $user_object = new \ChatUser;
