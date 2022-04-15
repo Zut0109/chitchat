@@ -1,6 +1,6 @@
 <?php
-include("class/user.php");
 session_start();
+include("class/user.php");
 require __DIR__ . '/vendor/autoload.php';
 if(!isset($_SESSION['mail']))
 {
@@ -9,8 +9,6 @@ if(!isset($_SESSION['mail']))
 $user= new user;
 
 $friend= $user->findfriend($_SESSION['mail']);
-
-echo $_SESSION['mail'];
 
 while($row = $friend->fetch_assoc()) {
 	$_SESSION['namefr']=$row['name'];
