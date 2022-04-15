@@ -10,7 +10,7 @@ class user
 	}
 	function getAllUser()
 	{
-		$conn = new mysqli("us-cdbr-east-05.cleardb.net","b879315a711615","a9caf152");
+		$conn = new mysqli("us-cdbr-east-05.cleardb.net","heroku_15432f44b19325e","b879315a711615","a9caf152");
 		$result = $conn->query("SELECT * FROM user");
     	if ($result->num_rows > 0) 
         	return $result;
@@ -18,7 +18,7 @@ class user
 	}
 	function getAllChat()
 	{
-		$conn = new mysqli("us-cdbr-east-05.cleardb.net","b879315a711615","a9caf152");
+		$conn = new mysqli("us-cdbr-east-05.cleardb.net","heroku_15432f44b19325e","b879315a711615","a9caf152");
 		$result = $conn->query("SELECT * FROM tinnhan");
     	if ($result->num_rows > 0) 
         	return $result;
@@ -26,7 +26,7 @@ class user
 	}
 	function findfriend($mail)
 	{
-		$conn = new mysqli("us-cdbr-east-05.cleardb.net","b879315a711615","a9caf152");
+		$conn = new mysqli("us-cdbr-east-05.cleardb.net","heroku_15432f44b19325e","b879315a711615","a9caf152");
 		$result = $conn->query("SELECT * FROM chatfriend as cf INNER JOIN user us on cf.friend= us.mail WHERE '$mail' = cf.me");
     	if ($result->num_rows > 0) 
         	return $result;
